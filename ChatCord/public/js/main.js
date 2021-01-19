@@ -19,7 +19,6 @@ socket.on('messaged',function(message){
 })
 
 // Message submit
-
 chatForm.addEventListener('submit',function(e){
     e.preventDefault();
     let msg = document.getElementById('msg');
