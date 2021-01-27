@@ -12,10 +12,18 @@ socket.on('message',function(message){
 
 socket.on('messageb',function(message){
     console.log(message);
+    outputMessage(message);
+
+    // Scroll Down
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 })
 
 socket.on('messaged',function(message){
     console.log(message);
+    outputMessage(message);
+
+    // Scroll Down
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 })
 
 // Message submit
