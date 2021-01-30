@@ -2,6 +2,14 @@ const socket = io();
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 
+// Get username and room from url
+
+const {username, room} = Qs.parse(location.search,{
+    ignoreQueryPrefix: true
+});
+
+console.log(username, room);
+
 socket.on('message',function(message){
     console.log(message);
     outputMessage(message);
@@ -48,5 +56,4 @@ function outputMessage(message){
     </p>`;
     document.querySelector('.chat-messages').appendChild(div);
 }
-
 
