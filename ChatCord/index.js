@@ -22,6 +22,14 @@ io.on('connection', function(socket){
 
         // BroadCast when a user connects
         socket.broadcast.to(user.room).emit('messageb',formatMessage(botName,` ${user.username} has joined the Chat`));
+
+        // Send users and room info
+
+        io.to(user.room).emit('roomUsers',{
+            room: user.room,
+            users: getRoomUsers(user.room)
+        });
+
     });
 
     console.log("New WS Conncetion with id = " +socket.id);
@@ -37,6 +45,13 @@ io.on('connection', function(socket){
         const user = userLeave(socket.id);
         if(user){
             io.to(user.room).emit('messaged',formatMessage(botName,`${user.username} has left the Chat`));
+            
+            // Send users and room info
+            io.to(user.room).emit('roomUsers',{
+                room: user.room,
+                users: getRoomUsers(user.room)
+            });
+
         }
     });
 
