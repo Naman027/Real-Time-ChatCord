@@ -8,7 +8,7 @@ npm install
 npm run dev
 Then go to localhost:3000
 ```
-
+The youtube link for a short presentation: https://www.youtube.com/watch?v=HCZkwoGw38M&feature=youtu.be
 
 
 
