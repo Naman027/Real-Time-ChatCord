@@ -16,9 +16,8 @@ The youtube link for a short presentation: https://www.youtube.com/watch?v=HCZkw
 >RealTime ChatApp using WebSockets using **NodeJs, Express, SocketIO** with **Vanilla JS** with a basic custom UI frontend.
 
 <li>Join a specified room to chat</li>
-<li>Automatically scroll down upon receiving a new message</li>
-<li>Responsive web design (RWD)</li>
 <li>Users can check whom are present in chat. Bot exists in chat which tells when a user entered or left. Page automatically scrolls down upon receiving a new chat message. Time of message also displayed.</li>
+<li>Responsive web design (RWD)</li>
 
 ## Built With
 
